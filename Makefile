@@ -4,7 +4,7 @@ FUNCS = atoi bzero isalnum isalpha isascii isdigit isprint itoa memalloc \
 	strclr strcmp strcpy strdel strdup strequ striter striteri strjoin \
 	strlcat strlen strmap strmapi strncat strncmp strncpy strnequ strnew \
 	strnstr strrchr strsplit strstr strsub strtrim tolower toupper \
-	lstadd lstdel lstdelone lstiter lstmap lstnew
+	lstadd lstadd_head lstadd_tail lstdel lstdelone lstfind lstiter lstmap lstnew
 WITH_PREFIX = $(addprefix ft_, $(FUNCS))
 NAME = $(addsuffix .o, $(WITH_PREFIX))
 FLAGS = -Wall -Werror -Wextra
@@ -82,11 +82,11 @@ ft_putendl.o: ft_putendl.c ft_putchar.c ft_putstr.c
 ft_putendl_fd.o: ft_putendl_fd.c ft_putchar_fd.c ft_putstr_fd.c
 	gcc $(FLAGS) -c ft_putendl_fd.c ft_putchar_fd.c ft_putstr_fd.c
 
-ft_putnbr.o: ft_putnbr.c ft_putstr.c ft_putchar.c ft_itoa.c
-	gcc $(FLAGS) -c ft_putnbr.c ft_putstr.c ft_putchar.c ft_itoa.c
+ft_putnbr.o: ft_putnbr.c ft_putstr.c ft_putchar.c
+	gcc $(FLAGS) -c ft_putnbr.c ft_putstr.c ft_putchar.c
 
-ft_putnbr_fd.o: ft_putnbr_fd.c ft_putstr_fd.c ft_putchar_fd.c ft_itoa.c
-	gcc $(FLAGS) -c ft_putnbr_fd.c ft_putstr_fd.c ft_putchar_fd.c ft_itoa.c
+ft_putnbr_fd.o: ft_putnbr_fd.c ft_putstr_fd.c ft_putchar_fd.c
+	gcc $(FLAGS) -c ft_putnbr_fd.c ft_putstr_fd.c ft_putchar_fd.c
 
 ft_putstr.o: ft_putstr.c ft_putchar.c
 	gcc $(FLAGS) -c ft_putstr.c ft_putchar.c
@@ -181,11 +181,23 @@ ft_toupper.o: ft_toupper.c
 ft_lstadd.o: ft_lstadd.c
 	gcc $(FLAGS) -c ft_lstadd.c
 
+ft_lstadd_head.o: ft_lstadd_head.c
+	gcc $(FLAGS) -c ft_lstadd_head.c
+
+ft_lstadd_tail.o: ft_lstadd_tail.c
+	gcc $(FLAGS) -c ft_lstadd_tail.c
+
 ft_lstdel.o: ft_lstdel.c ft_lstdelone.c
 	gcc $(FLAGS) -c ft_lstdel.c ft_lstdelone.c
 
 ft_lstdelone.o: ft_lstdelone.c
 	gcc $(FLAGS) -c ft_lstdelone.c
+
+ft_lstfind.o: ft_lstfind.c ft_strequ.c ft_strcmp.c
+	gcc $(FLAGS) -c ft_lstfind.c ft_strequ.c ft_strcmp.c
+
+ft_lstins_after.o: ft_lstins_after.c
+	gcc $(FLAGS) -c ft_lstins_after.c
 
 ft_lstiter.o: ft_lstiter.c
 	gcc $(FLAGS) -c ft_lstiter.c

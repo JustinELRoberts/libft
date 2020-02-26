@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:41:12 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 12:37:48 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/02/26 11:27:23 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,12 @@ int					ft_isdigit(int c);
 int					ft_isprint(int c);
 char				*ft_itoa(int num);
 void				ft_lstadd(t_list **alst, t_list *new_lst);
+void				ft_lstadd_head(t_list **alst, t_list *new_lst);
 void				ft_lstadd_tail(t_list **alst, t_list *new_lst);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+t_list				*ft_lstfind(t_list *lst, void *content);
+int					ft_lstins_after(t_list *oldlink, t_list *newlink);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(const void *content, size_t content_size);
