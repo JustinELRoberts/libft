@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 13:47:42 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 15:02:24 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/02/26 11:37:24 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	num_digits(int num)
 	return (result);
 }
 
-int			is_null(char *result)
+static int	is_null(char *result)
 {
 	if (result == NULL)
 	{
