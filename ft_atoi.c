@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 12:53:26 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 15:11:57 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/02/26 12:07:06 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int			ft_atoi(char *str)
 	long long int	result;
 
 	i = 0;
-	while (str[i] && ft_iswhitespace(str[i]))
+	while (str[i+1] && ft_iswhitespace(str[i]))
 		i++;
 	negative = 1;
 	if (str[i] == '-')
