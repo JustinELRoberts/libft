@@ -4,7 +4,7 @@ FUNCS = atoi bzero isalnum isalpha isascii isdigit isprint itoa memalloc \
 	strchr strclr strcmp strcpy strdel strdup strequ striter striteri strjoin \
 	strlcat strlen strmap strmapi strncat strncmp strncpy strnequ strnew \
 	strnstr strrchr strsplit strstr strsub strtrim tolower toupper \
-	lstadd lstadd_head lstadd_tail lstdel lstdelone lstfind lstiter lstmap lstnew
+	lstadd lstadd_tail lstdel lstdelone lstfind lstiter lstmap lstnew
 WITH_PREFIX = $(addprefix ft_, $(FUNCS))
 SRC = $(addsuffix .c, $(WITH_PREFIX))
 NAME = $(addsuffix .o, $(WITH_PREFIX))
