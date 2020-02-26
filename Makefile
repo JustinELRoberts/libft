@@ -1,7 +1,7 @@
 FUNCS = atoi bzero isalnum isalpha isascii isdigit isprint itoa memalloc \
 	 memccpy memchr memcmp memdel memmove memset putchar putchar_fd \
-	putendl putendl_fd putnbr putnbr_fd putstr putstr_fd strcat strchr \
-	strclr strcmp strcpy strdel strdup strequ striter striteri strjoin \
+	putendl putendl_fd putnbr putnbr_fd putstr putstr_fd putnstr putnstr_fd strcat \
+	strchr strclr strcmp strcpy strdel strdup strequ striter striteri strjoin \
 	strlcat strlen strmap strmapi strncat strncmp strncpy strnequ strnew \
 	strnstr strrchr strsplit strstr strsub strtrim tolower toupper \
 	lstadd lstadd_head lstadd_tail lstdel lstdelone lstfind lstiter lstmap lstnew
@@ -93,6 +93,12 @@ ft_putstr.o: ft_putstr.c ft_putchar.c
 
 ft_putstr_fd.o: ft_putstr_fd.c ft_putchar_fd.c
 	gcc $(FLAGS) -c ft_putstr_fd.c ft_putchar_fd.c
+
+ft_putnstr.o: ft_putnstr.c ft_putchar.c
+	gcc $(FLAGS) -c ft_putnstr.c ft_putchar.c
+
+ft_putnstr_fd.o: ft_putnstr_fd.c ft_putchar_fd.c
+	gcc $(FLAGS) -c ft_putnstr_fd.c ft_putchar_fd.c
 
 ft_strcat.o: ft_strcat.c ft_strlen.c
 	gcc $(FLAGS) -c ft_strcat.c ft_strlen.c
