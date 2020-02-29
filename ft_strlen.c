@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:44:35 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/20 13:42:58 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/02/27 17:44:55 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int		ft_strlen(const char *str)
 {
 	int		len;
 
+	if (str == NULL)
+		return (0);
 	len = 0;
 	while (str[len])
 		len++;
