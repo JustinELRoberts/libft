@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 18:08:37 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 16:54:44 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/01 13:20:52 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr(int num)
 		num *= -1;
 		ft_putchar('-');
 	}
-	if (num > 10)
+	if (num >= 10)
 	{
 		ft_putnbr(num / 10);
 		ft_putnbr(num % 10);
