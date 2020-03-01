@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:41:12 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/26 11:41:01 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/02/29 15:54:26 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int					ft_lstins_after(t_list *oldlink, t_list *newlink);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(const void *content, size_t content_size);
+void				ft_lst_linkrm(t_list *list, t_list *link);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *d, const void *s, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);

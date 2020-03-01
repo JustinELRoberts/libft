@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:12:51 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 14:52:36 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/01 13:14:55 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,9 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	char	*result;
 	int		i;
 
-	result = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	result = (char*)ft_memalloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (result == NULL)
-	{
-		free(result);
 		return (NULL);
-	}
 	i = 0;
 	while (s[i])
 	{

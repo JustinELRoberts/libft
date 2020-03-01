@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 13:47:42 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/26 11:37:24 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/01 13:14:02 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char		*ft_itoa(int num)
 	negative = 0;
 	if (num < 0)
 		negative = 1;
-	result = (char*)malloc(numlen + negative + 1);
+	result = (char*)ft_memalloc(numlen + negative + 1);
 	if (is_null(result))
 		return (NULL);
 	result[negative + numlen--] = '\0';

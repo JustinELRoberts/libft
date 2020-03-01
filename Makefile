@@ -43,7 +43,7 @@ ft_isdigit.o: ft_isdigit.c
 ft_isprint.o: ft_isprint.c
 	gcc $(FLAGS) -c ft_isprint.c
 
-ft_itoa.o: ft_itoa.c
+ft_itoa.o: ft_itoa.c ft_memalloc.o
 	gcc $(FLAGS) -c ft_itoa.c
 
 ft_memalloc.o: ft_memalloc.c
@@ -118,7 +118,7 @@ ft_strcpy.o: ft_strcpy.c
 ft_strdel.o: ft_strdel.c
 	gcc $(FLAGS) -c ft_strdel.c
 
-ft_strdup.o: ft_strdup.c ft_strlen.o
+ft_strdup.o: ft_strdup.c ft_strlen.o ft_memalloc.o
 	gcc $(FLAGS) -c ft_strdup.c
 
 ft_strequ.o: ft_strequ.c ft_strcmp.o
@@ -130,7 +130,7 @@ ft_striter.o: ft_striter.c
 ft_striteri.o: ft_striteri.c
 	gcc $(FLAGS) -c ft_striteri.c
 
-ft_strjoin.o: ft_strjoin.c ft_strlen.o
+ft_strjoin.o: ft_strjoin.c ft_strlen.o ft_memalloc.o
 	gcc $(FLAGS) -c ft_strjoin.c
 
 ft_strlcat.o: ft_strlcat.c ft_strlen.o
@@ -139,10 +139,10 @@ ft_strlcat.o: ft_strlcat.c ft_strlen.o
 ft_strlen.o: ft_strlen.c
 	gcc $(FLAGS) -c ft_strlen.c
 
-ft_strmap.o: ft_strmap.c ft_strlen.o
+ft_strmap.o: ft_strmap.c ft_strlen.o ft_memalloc.o
 	gcc $(FLAGS) -c ft_strmap.c
 
-ft_strmapi.o: ft_strmapi.c ft_strlen.o
+ft_strmapi.o: ft_strmapi.c ft_strlen.o ft_memalloc.o
 	gcc $(FLAGS) -c ft_strmapi.c
 
 ft_strncat.o: ft_strncat.c ft_strlen.o
@@ -157,7 +157,7 @@ ft_strncpy.o: ft_strncpy.c
 ft_strnequ.o: ft_strnequ.c ft_strncmp.o
 	gcc $(FLAGS) -c ft_strnequ.c
 
-ft_strnew.o: ft_strnew.c
+ft_strnew.o: ft_strnew.c ft_memalloc.o
 	gcc $(FLAGS) -c ft_strnew.c
 
 ft_strnstr.o: ft_strnstr.c ft_strcmp.o ft_strlen.o ft_strsub.o
@@ -166,13 +166,13 @@ ft_strnstr.o: ft_strnstr.c ft_strcmp.o ft_strlen.o ft_strsub.o
 ft_strrchr.o: ft_strrchr.c
 	gcc $(FLAGS) -c ft_strrchr.c
 
-ft_strsplit.o: ft_strsplit.c ft_strlen.o ft_strcmp.o
+ft_strsplit.o: ft_strsplit.c ft_strlen.o ft_strcmp.o ft_memalloc.o
 	gcc $(FLAGS) -c ft_strsplit.c
 
 ft_strstr.o: ft_strstr.c ft_strcmp.o ft_strlen.o ft_strsub.o
 	gcc $(FLAGS) -c ft_strstr.c
 
-ft_strsub.o: ft_strsub.c
+ft_strsub.o: ft_strsub.c ft_memalloc.o
 	gcc $(FLAGS) -c ft_strsub.c
 
 ft_strtrim.o: ft_strtrim.c ft_strlen.o ft_strsub.o
@@ -211,6 +211,6 @@ ft_lstiter.o: ft_lstiter.c
 ft_lstmap.o: ft_lstmap.c
 	gcc $(FLAGS) -c ft_lstmap.c
 
-ft_lstnew.o: ft_lstnew.c
+ft_lstnew.o: ft_lstnew.c ft_memalloc.o
 	gcc $(FLAGS) -c ft_lstnew.c
 

@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 18:55:04 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/23 18:58:32 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/01 13:15:46 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char			**ft_strsplit(const char *s, char c)
 	int		*ind;
 
 	make_delim_locs(s, c, delim_locs);
-	result = (char **)malloc(sizeof(char*) * (get_num_delims(delim_locs) + 1));
+	result = (char **)ft_memalloc(sizeof(char*) * (get_num_delims(delim_locs) + 1));
 	ind = (int[3]){-1, 0, 0};
 	while (++ind[0] < get_num_delims(delim_locs) + 1)
 		result[ind[0]] = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));

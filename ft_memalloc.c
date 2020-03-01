@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 19:10:25 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 14:34:50 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/01 13:10:13 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ void	*ft_memalloc(size_t size)
 
 	result = malloc(size);
 	if (result == NULL)
-	{
-		free(result);
 		return (NULL);
-	}
 	i = 0;
 	while (i < (int)size)
 	{
