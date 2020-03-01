@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:34:57 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 12:36:42 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/02/27 13:32:48 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ void	ft_lstadd_tail(t_list **alst, t_list *new_lst)
 	t_list		*link;
 
 	link = *alst;
+	if (link == NULL)
+	{
+		*alst = new_lst;
+		return ;
+	}
 	while (link->next != NULL)
 		link = link->next;
 	link->next = new_lst;
