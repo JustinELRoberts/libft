@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:41:12 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/29 15:54:26 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/10 20:31:29 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_matrix
+{
+	int				size[2];
+	double			**content;
+}					t_matrix;
 
 int					ft_atoi(char *str);
 void				ft_bzero(void *s, size_t n);
@@ -42,6 +48,10 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(const void *content, size_t content_size);
 void				ft_lst_linkrm(t_list *list, t_list *link);
+t_matrix			*ft_matcreate(int n_rows, int n_cols);
+void				ft_matdestroy(t_matrix *matrix);
+t_matrix			*ft_matmult(t_matrix *m1, t_matrix *m2);
+t_matrix			*ft_mattranspose(t_matrix *mat);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *d, const void *s, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
