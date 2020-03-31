@@ -6,7 +6,7 @@
 /*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/30 08:40:59 by jroberts          #+#    #+#             */
-/*   Updated: 2020/03/30 08:57:48 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/31 08:55:28 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,14 @@ static t_matrix	*get_adjugate(t_matrix *matrix)
 
 t_matrix		*ft_matinverse(t_matrix *matrix)
 {
-	int			det;
+	double		det;
 	int			i;
 	int			j;
 	t_matrix	*adjugate;
 	t_matrix	*result;
 
 	det = ft_matdet(matrix);
-	if (det == 0)
+	if (det == 0.0)
 		return (NULL);
 	adjugate = get_adjugate(matrix);
 	result = ft_matcreate(matrix->size[0], matrix->size[1]);

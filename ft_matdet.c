@@ -6,7 +6,7 @@
 /*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/30 07:41:10 by jroberts          #+#    #+#             */
-/*   Updated: 2020/03/30 07:56:22 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/03/31 08:41:59 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ static void	get_cofactor(t_matrix *matrix, t_matrix *temp, int cur_r, int cur_c)
 
 double		ft_matdet(t_matrix *matrix)
 {
-	int			result;
+	double		result;
 	int			sign;
 	int			i;
-	t_matrix	*temp;
+	t_matrix	*cofactor;
 
 	result = 0;
 	sign = 1;
@@ -54,14 +54,14 @@ double		ft_matdet(t_matrix *matrix)
 		return (0);
 	if (matrix->size[0] == 1)
 		return (matrix->content[0][0]);
-	temp = ft_matcreate(matrix->size[0] - 1, matrix->size[1] - 1);
+	cofactor = ft_matcreate(matrix->size[0] - 1, matrix->size[1] - 1);
 	i = -1;
 	while (++i < matrix->size[1])
 	{
-		get_cofactor(matrix, temp, 0, i);
-		result += sign * matrix->content[0][i] * ft_matdet(temp);
+		get_cofactor(matrix, cofactor, 0, i);
+		result += sign * matrix->content[0][i] * ft_matdet(cofactor);
 		sign *= -1;
 	}
-	ft_matdestroy(temp);
+	ft_matdestroy(cofactor);
 	return (result);
 }
