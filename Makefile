@@ -5,7 +5,7 @@ FUNCS = atoi bzero isalnum isalpha isascii isdigit isprint itoa memalloc \
 	strlcat strlen strmap strmapi strncat strncmp strncpy strnequ strnew \
 	strnstr strrchr strsplit strstr strsub strtrim tolower toupper \
 	lstadd lstadd_head lstadd_tail lstdel lstdelone lstfind lstiter lstmap lstnew \
-	matcreate matdestroy matdet matinverse matmult mattranspose
+	matcreate matdestroy matdet matinverse matmult matnorm mattranspose
 WITH_PREFIX = $(addprefix ft_, $(FUNCS))
 NAME = libft.a
 PRECOMPILED = $(addsuffix .o, $(WITH_PREFIX))

@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:41:12 by jroberts          #+#    #+#             */
-/*   Updated: 2020/03/30 08:41:13 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/04/05 07:51:46 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void				ft_matdestroy(t_matrix *matrix);
 double				ft_matdet(t_matrix *mat);
 t_matrix			*ft_matinverse(t_matrix *matrix);
 t_matrix			*ft_matmult(t_matrix *m1, t_matrix *m2);
+double				ft_matnorm(t_matrix *matrix);
 t_matrix			*ft_mattranspose(t_matrix *mat);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *d, const void *s, int c, size_t n);
