@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 18:14:46 by jroberts          #+#    #+#             */
-/*   Updated: 2020/04/17 10:13:04 by jroberts         ###   ########.fr       */
+/*   Created: 2020/04/17 08:31:50 by jroberts          #+#    #+#             */
+/*   Updated: 2020/04/17 08:32:59 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_lstadd_front(t_list **alst, t_list *new_lst)
 {
-	if (as != NULL && *as != NULL)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	new_lst->next = *alst;
+	*alst = new_lst;
 }

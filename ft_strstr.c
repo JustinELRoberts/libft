@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 09:43:26 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/20 09:55:57 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/04/11 08:22:34 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	i = 0;
 	while (haystack[i])
 	{
-		if (ft_strcmp(needle, ft_strsub(haystack, i, needle_len)) == 0)
+		if (ft_strcmp(needle, ft_substr(haystack, i, needle_len)) == 0)
 			return ((char*)&haystack[i]);
 		i++;
 	}

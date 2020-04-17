@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 09:24:33 by jroberts          #+#    #+#             */
-/*   Updated: 2020/03/01 13:14:39 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/04/17 10:19:41 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int		i;
 	int		j;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	tot_len = ft_strlen(s1) + ft_strlen(s2);
 	result = (char*)ft_memalloc(sizeof(char) * (tot_len + 1));
 	if (result == NULL)

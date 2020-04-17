@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 09:33:28 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/23 17:25:31 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/04/17 10:20:08 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char		*ft_strtrim(const char *s)
 	int		i;
 	int		new_indices[2];
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	while (is_whitespace(s[i]) && s[i])
 		i++;
@@ -35,5 +37,5 @@ char		*ft_strtrim(const char *s)
 	new_indices[1] = i;
 	if (new_indices[1] == -1)
 		return ("");
-	return (ft_strsub(s, new_indices[0], new_indices[1] - new_indices[0] + 1));
+	return (ft_substr(s, new_indices[0], new_indices[1] - new_indices[0] + 1));
 }

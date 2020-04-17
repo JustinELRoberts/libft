@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_tail.c                                   :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 12:34:57 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/27 13:32:48 by jroberts         ###   ########.fr       */
+/*   Created: 2020/04/17 08:50:23 by jroberts          #+#    #+#             */
+/*   Updated: 2020/04/17 08:52:04 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_tail(t_list **alst, t_list *new_lst)
+int	ft_lstsize(t_list *lst)
 {
-	t_list		*link;
+	int		result;
 
-	link = *alst;
-	if (link == NULL)
+	if (lst == NULL)
+		return (0);
+	result = 1;
+	while (lst->next != NULL)
 	{
-		*alst = new_lst;
-		return ;
+		result += 1;
+		lst = lst->next;
 	}
-	while (link->next != NULL)
-		link = link->next;
-	link->next = new_lst;
+	return (result);
 }

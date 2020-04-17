@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 11:18:23 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/25 15:27:41 by jroberts         ###   ########.fr       */
+/*   Created: 2020/04/17 08:34:09 by jroberts          #+#    #+#             */
+/*   Updated: 2020/04/17 09:41:51 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void	ft_lstclear(t_list **alst, void (*del)(void *))
 {
 	t_list		*previous_link;
 	t_list		*link;
@@ -23,10 +23,10 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	link = previous_link->next;
 	while (link != NULL)
 	{
-		ft_lstdelone(&previous_link, del);
+		del(previous_link);
 		previous_link = link;
 		link = link->next;
 	}
-	ft_lstdelone(&previous_link, del);
+	del(previous_link);
 	*alst = NULL;
 }

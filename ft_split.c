@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 18:55:04 by jroberts          #+#    #+#             */
-/*   Updated: 2020/03/01 13:15:46 by jroberts         ###   ########.fr       */
+/*   Created: 2020/04/11 08:24:34 by jroberts          #+#    #+#             */
+/*   Updated: 2020/04/17 15:19:31 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static void		make_delim_locs(const char *s, char c, int *delim_locs)
 	get_delim_locs(s, c, delim_locs);
 }
 
-char			**ft_strsplit(const char *s, char c)
+char			**ft_split(const char *s, char c)
 {
 	char	**result;
 	int		delim_locs[ft_strlen(s) + 1];
@@ -95,5 +95,5 @@ char			**ft_strsplit(const char *s, char c)
 		}
 		result[ind[0]][ind[2]++] = s[ind[1]++];
 	}
-	return (result);
+	return (s != NULL) ? result : NULL;
 }

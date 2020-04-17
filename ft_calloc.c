@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_head.c                                   :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 11:18:33 by jroberts          #+#    #+#             */
-/*   Updated: 2020/02/26 11:37:02 by jroberts         ###   ########.fr       */
+/*   Created: 2020/04/11 08:18:03 by jroberts          #+#    #+#             */
+/*   Updated: 2020/04/17 14:32:34 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_head(t_list **alst, t_list *new_lst)
+void		*ft_calloc(size_t count, size_t size)
 {
-	new_lst->next = *alst;
-	*alst = new_lst;
+	void	*result;
+
+	result = ft_memalloc(count * size);
+	if (result == NULL)
+		return (NULL);
+	ft_bzero(result, count * size);
+	return (result);
 }
