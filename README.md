@@ -2,7 +2,7 @@
 
 ## Table of contents
 * ### [String Manipulation](#String-Manipulation-1)
-    * [ft_atoi](####`int-ft_atoi(const-char-*str)`)
+    * [ft_atoi](#int-ft_atoiconst-char-str)
     * [ft_bzero]()
     * [ft_isalnum]()
     * [ft_isalpha]()
