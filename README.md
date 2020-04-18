@@ -1,8 +1,8 @@
 # Libft
 
 ## Table of contents
-* ### [String Manipulation]()
-    * [ft_atoi]()
+* ### [String Manipulation](#String-Manipulation-1)
+    * [ft_atoi](#int-ft_atoi(const-char-*str))
     * [ft_bzero]()
     * [ft_isalnum]()
     * [ft_isalpha]()
@@ -50,7 +50,7 @@
     * [ft_tolower]()
     * [ft_toupper]()
 
-* ### [Memory Manipulation Functions]()
+* ### [Memory Manipulation](#Memory-Manipulation-1)
     * [ft_calloc]()
     * [ft_memalloc]()
     * [ft_memcpy]()
@@ -61,7 +61,7 @@
     * [ft_memmove]()
     * [ft_memset]()
 
-* ### [Linked Lists]()
+* ### [Linked Lists](#Linked-Lists-1)
     * [ft_lstadd_back]()
     * [ft_lstadd_front]()
     * [ft_lstclear]()
@@ -74,7 +74,7 @@
     * [ft_lstnew]()
     * [ft_lstsize]()
     
-* ### [Matrix Operations]()
+* ### [Matrices](#Matrices-1)
     * [matcreate]()
     * [matdestroy]()
     * [matdet]()
@@ -88,7 +88,14 @@ ___
 
 ## String Manipulation
 
-* `ft_atoi()`
+* #### `int ft_atoi(const char *str)`
+
+    * Converts the initial portion of the string `str` to an `int`. It will trim whitespace from the beginning and end of the string. Additionally, it will stop at the first non-digit character (e.g. `"  \t\n123ab456 \b" would return 123`)
+
+    * Parameters:
+        * `str`: The string to convert
+
+    * Return Value: The 
 
 
 * `void ft_bzero(void *str, size_t n)`
