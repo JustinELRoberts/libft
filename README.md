@@ -88,14 +88,14 @@ ___
 
 ## String Manipulation
 
-* #### `int ft_atoi(const char *str)`
+#### `int ft_atoi(const char *str)`
 
-    * Converts the initial portion of the string `str` to an `int`. It will trim whitespace from the beginning and end of the string. Additionally, it will stop at the first non-digit character (e.g. `"  \t\n123ab456 \b" would return 123`)
+* Converts the initial portion of the string `str` to an `int`. It will trim whitespace from the beginning and end of the string. Additionally, it will stop at the first non-digit character (e.g. `"  \t\n123ab456 \b" would return 123`)
 
-    * Parameters:
-        * `str`: The string to convert
+* Parameters:
+    * `str`: The string to convert
 
-    * Return Value: The 
+* Return Value: The 
 
 
 * `void ft_bzero(void *str, size_t n)`
