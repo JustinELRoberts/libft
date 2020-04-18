@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jroberts <jroberts1@student.42.us.org      +#+  +:+       +#+        */
+/*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/11 08:24:34 by jroberts          #+#    #+#             */
-/*   Updated: 2020/04/17 15:19:31 by jroberts         ###   ########.fr       */
+/*   Created: 2020/04/18 09:47:55 by jroberts          #+#    #+#             */
+/*   Updated: 2020/04/18 09:49:13 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ char			**ft_split(const char *s, char c)
 	int		*ind;
 
 	make_delim_locs(s, c, delim_locs);
-	result = (char **)ft_memalloc(sizeof(char*) * (get_num_delims(delim_locs) + 1));
-	ind = (int[3]){-1, 0, 0};
+	ind = (int[3]){-1, get_num_delims(delim_locs), 0};
+	result = (char **)ft_memalloc(sizeof(char*) * (ind[1] + 1));
 	while (++ind[0] < get_num_delims(delim_locs) + 1)
 		result[ind[0]] = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	result[get_num_delims(delim_locs)] = NULL;

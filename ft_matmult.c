@@ -6,13 +6,13 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 14:31:17 by jroberts          #+#    #+#             */
-/*   Updated: 2020/03/10 20:31:59 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/04/18 09:52:31 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static double	mult_vecs(double **content1, int row, double **content2, int col, int size)
+static double	mult_vecs(double **cont1, double **cont2, int pos[2], int size)
 {
 	int		i;
 	double	res;
@@ -21,7 +21,7 @@ static double	mult_vecs(double **content1, int row, double **content2, int col, 
 	res = 0;
 	while (i < size)
 	{
-		res += content1[row][i] * content2[i][col];
+		res += content1[ind[0]][i] * content2[i][ind[1]];
 		i++;
 	}
 	return (res);
@@ -42,7 +42,7 @@ t_matrix		*ft_matmult(t_matrix *m1, t_matrix *m2)
 		ind[1] = -1;
 		while (++ind[1] < res->size[1])
 		{
-			sum = mult_vecs(m1->content, ind[0], m2->content, ind[1], m1->size[1]);
+			sum = mult_vecs(m1->content, m2->content, ind, m1->size[1]);
 			res->content[ind[0]][ind[1]] = sum;
 		}
 	}
