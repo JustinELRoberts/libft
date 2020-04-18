@@ -98,504 +98,516 @@ ___
 * Return Value: The 
 
 
-* `void ft_bzero(void *str, size_t n)`
+#### `void ft_bzero(void *str, size_t n)`
 
-    * Writes `n` zeroed bytes (i.e. `\0`) to the string `str`.
+* Writes `n` zeroed bytes (i.e. `\0`) to the string `str`.
 
-    * Parameters:
-        * `str`: The string to write to
-        * `n`: The number of `\0`s to write to `str`
+* Parameters:
+    * `str`: The string to write to
+    * `n`: The number of `\0`s to write to `str`
 
-    * Return Value: None
+* Return Value: None
 
 
-* `int ft_isalnum(int c)`
+#### `int ft_isalnum(int c)`
 
-    * Tests for any character where `ft_isalpha(c)` or `ft_isdigit(c)` is true.
+* Tests for any character where `ft_isalpha(c)` or `ft_isdigit(c)` is true.
 
-    * Parameters:
-        * `c`: An integer which is cast to an unsigned character, then tested
+* Parameters:
+    * `c`: An integer which is cast to an unsigned character, then tested
 
-    * Return Value: `1` if the above condition is true; `0` otherwise.
+* Return Value: `1` if the above condition is true; `0` otherwise.
 
 
-* `int ft_isalpha(int c)`
+#### `int ft_isalpha(int c)`
 
-    * Tests for any chracter which `ft_isupper(c)` or `ft_islower(c)` is true.
+* Tests for any chracter which `ft_isupper(c)` or `ft_islower(c)` is true.
 
-    * Parameters:
-        * `c`: An integer which is cast to an unsigned character, then tested
+* Parameters:
+    * `c`: An integer which is cast to an unsigned character, then tested
 
-    * Return Value: `1` if the above condition is true; `0` otherwise.
+* Return Value: `1` if the above condition is true; `0` otherwise.
 
 
-* `int ft_isascii(int c)`
+#### `int ft_isascii(int c)`
 
-    * Tests for any ascii character, which is any char between 0 and 127 inclusive.
+* Tests for any ascii character, which is any char between 0 and 127 inclusive.
 
-    * Parameters:
-        * `c`: An integer which is cast to an unsigned character, then tested
+* Parameters:
+    * `c`: An integer which is cast to an unsigned character, then tested
 
-    * Return Value: `1` if the above condition is true; `0` otherwise.
+* Return Value: `1` if the above condition is true; `0` otherwise.
 
 
-* `int ft_isdigit(int c)`
+`int ft_isdigit(int c)`
 
-    * Tests for a digit character, which is any char between `'0'` and `'9'` inclusive.
+* Tests for a digit character, which is any char between `'0'` and `'9'` inclusive.
 
-    * Parameters:
-        * `c`: An integer which is cast to an unsigned character, then tested
+* Parameters:
+    * `c`: An integer which is cast to an unsigned character, then tested
 
-    * Return Value: `1` if the above condition is true; `0` otherwise.
+* Return Value: `1` if the above condition is true; `0` otherwise.
 
 
-* `int ft_isprint(int c)`
+#### `int ft_isprint(int c)`
 
-    * Tests for any printable character. See `man isprint` for a list of printable characters.
+* Tests for any printable character. See `man isprint` for a list of printable characters.
 
-    * Parameters:
-        * `c`: An integer which is cast to an unsigned character, then tested
+* Parameters:
+    * `c`: An integer which is cast to an unsigned character, then tested
 
-    * Return Value: `1` if the above condition is true; `0` otherwise.
+* Return Value: `1` if the above condition is true; `0` otherwise.
 
 
-* `char *ft_itoa(int n)`
+#### `char *ft_itoa(int n)`
 
-    * Allocates (with `malloc()`) and returns a string representing the integer received as an argument.
+* Allocates (with `malloc()`) and returns a string representing the integer received as an argument.
 
-    * Parameters:
-        * `n`: The integer to convert
+* Parameters:
+    * `n`: The integer to convert
 
-    * Return Value: The string representing the integer. `NULL` if the allocation fails.
+* Return Value: The string representing the integer. `NULL` if the allocation fails.
 
 
-* `void ft_putchar(char c)`
+#### `void ft_putchar(char c)`
 
-    * Outputs the character ’c’ to the standard output.
+* Outputs the character ’c’ to the standard output.
 
-    * Parameters:
-        * `c`: The character to output
-    
-    * Return Value: None
+* Parameters:
+    * `c`: The character to output
 
+* Return Value: None
 
-* `void ft_putchar_fd(char c, int fd)`
 
-    * Outputs the character ’c’ to the given file descriptor.
+#### `void ft_putchar_fd(char c, int fd)`
 
-    * Parameters:
-        * `c`: The character to output
-        * `fd`: The file descriptor to write to
-    
-    * Return Value: None
+* Outputs the character ’c’ to the given file descriptor.
 
+* Parameters:
+    * `c`: The character to output
+    * `fd`: The file descriptor to write to
 
-* `void ft_putendl(char *str)`
+* Return Value: None
 
-    * Outputs the string `str` to the standard output, followed by a newline.
 
-    * Parameters:
-        * `str`: The string to output
+#### `void ft_putendl(char *str)`
 
-    * Return Value: None
+* Outputs the string `str` to the standard output, followed by a newline.
 
+* Parameters:
+    * `str`: The string to output
 
-* `void ft_putendl_fd(char *str, int fd)`
+* Return Value: None
 
-    * Outputs the string `str` to the given file descriptor, followed by a newline.
 
-    * Parameters:
-        * `str`: The string to output
-        * `fd`: The file descriptor to write to
+#### `void ft_putendl_fd(char *str, int fd)`
 
-    * Return Value: None
+* Outputs the string `str` to the given file descriptor, followed by a newline.
 
+* Parameters:
+    * `str`: The string to output
+    * `fd`: The file descriptor to write to
 
-* `void ft_putnbr(int n)`
+* Return Value: None
 
-    * Outputs the integer `n` to the standard output.
 
-    * Parameters:
-        * `n`: The integer to output
+#### `void ft_putnbr(int n)`
 
-    * Return Value: None
+* Outputs the integer `n` to the standard output.
 
+* Parameters:
+    * `n`: The integer to output
 
-* `void ft_putnbr_fd(int n, int fd)`
+* Return Value: None
 
-    * Outputs the integer `n` to the given file descriptor.
 
-    * Parameters:
-        * `n`: The integer to output
-        * `fd`: The file descriptor to write to
+#### `void ft_putnbr_fd(int n, int fd)`
 
-    * Return Value: None
+* Outputs the integer `n` to the given file descriptor.
 
+* Parameters:
+    * `n`: The integer to output
+    * `fd`: The file descriptor to write to
 
-* `void ft_putnstr_fd(char *str)`
+* Return Value: None
 
-    * Outputs n characters from the string `str` to the standard output.
 
-    * Parameters:
-        * `str`: The string to output
+#### `void ft_putnstr_fd(char *str)`
 
-    * Return Value: None
+* Outputs n characters from the string `str` to the standard output.
 
+* Parameters:
+    * `str`: The string to output
 
-* `void ft_putnstr_fd(char *str, int fd)`
+* Return Value: None
 
-    * Outputs n characters from the string `str` to the given file descriptor.
 
-    * Parameters:
-        * `str`: The string to output
-        * `fd`: The file descriptor to write to
+#### `void ft_putnstr_fd(char *str, int fd)`
 
-    * Return Value: None
+* Outputs n characters from the string `str` to the given file descriptor.
 
+* Parameters:
+    * `str`: The string to output
+    * `fd`: The file descriptor to write to
 
-* `void ft_putstr_fd(char *str)`
+* Return Value: None
 
-    * Outputs the string `str` to the standard output.
 
-    * Parameters:
-        * `str`: The string to output
+#### `void ft_putstr_fd(char *str)`
 
-    * Return Value: None
+* Outputs the string `str` to the standard output.
 
+* Parameters:
+    * `str`: The string to output
 
-* `void ft_putstr_fd(char *str, int fd)`
+* Return Value: None
 
-    * Outputs the string `str` to the given file descriptor.
 
-    * Parameters:
-        * `str`: The string to output
-        * `fd`: The file descriptor to write to
+#### `void ft_putstr_fd(char *str, int fd)`
 
-    * Return Value: None
+* Outputs the string `str` to the given file descriptor.
 
+* Parameters:
+    * `str`: The string to output
+    * `fd`: The file descriptor to write to
 
-*  `char **ft_split(const char *str, char c)`
+* Return Value: None
 
-    * Allocates (with `malloc()`) and returns an array of strings obtained by splitting `str` using the character `c` as a delimiter. The array must be ended by a `NULL` pointer.
 
-    * Parameters:
-        * `str`: The string to split
-        * `c`: The delimiting character
+#### `char **ft_split(const char *str, char c)`
 
-    * Return Value: The array of new strings resulting from the split. `NULL` if the allocation fails.
+* Allocates (with `malloc()`) and returns an array of strings obtained by splitting `str` using the character `c` as a delimiter. The array must be ended by a `NULL` pointer.
 
+* Parameters:
+    * `str`: The string to split
+    * `c`: The delimiting character
 
-* `char *ft_strcat(char str1, const char str2)`
+* Return Value: The array of new strings resulting from the split. `NULL` if the allocation fails.
 
-    * Allocates (with `malloc()`) and returns a copy of the string resulting from the concatenation of `str1` and `str2`. Both of these strings are assumed to be null-terminating. `str1` must have enough space to hold the result.
 
-    * Parameters:
-        * `str1`: The prefix string
-        * `str2`: The string apppended to `str1`
+#### `char *ft_strcat(char str1, const char str2)`
 
-    * Return Value: The string resulting from the concatenation of `str1` and `str2`. `NULL` if allocation fails.
+* Allocates (with `malloc()`) and returns a copy of the string resulting from the concatenation of `str1` and `str2`. Both of these strings are assumed to be null-terminating. `str1` must have enough space to hold the result.
 
+* Parameters:
+    * `str1`: The prefix string
+    * `str2`: The string apppended to `str1`
 
-* `char *ft_strchr(const char *str, int c)`
+* Return Value: The string resulting from the concatenation of `str1` and `str2`. `NULL` if allocation fails.
 
-    * Locates the first occurence of `c` (converted to a `char`) in `str`. The terminating null character (`\0`) is considered part of the string.
 
-    * Parameters:
-        * `str`: The string to search
-        * `c`: An integer (converted to a `char`) which is searched for in `str`
+#### `char *ft_strchr(const char *str, int c)`
 
-    * Return Value: A pointer to the located character, or `NULL` if the character does not appear in the string.
+* Locates the first occurence of `c` (converted to a `char`) in `str`. The terminating null character (`\0`) is considered part of the string.
 
+* Parameters:
+    * `str`: The string to search
+    * `c`: An integer (converted to a `char`) which is searched for in `str`
 
-* `void ft_strclr(char *str)`
+* Return Value: A pointer to the located character, or `NULL` if the character does not appear in the string.
 
-    * Sets every character of the string `str` to `\0`.
 
-    * Parameters:
-        * `str`: The string to clear
+#### `void ft_strclr(char *str)`
 
-    * Return Value: None
+* Sets every character of the string `str` to `\0`.
 
+* Parameters:
+    * `str`: The string to clear
 
-* `int ft_strcmp(const char *str1, const char *str2)`
+* Return Value: None
 
-    * Lexicographically compares the null-terminated string `str1` and `str2`.
 
-    * Parameters:
-        * `str1`: The string compared to `str2`
-        * `str2`: The string compared to `str1`
+#### `int ft_strcmp(const char *str1, const char *str2)`
 
-    * Return Value: `0` if the strings are identical. If not, finds the first character differing in the two strings (including `\0`) and returns `str1[diff_spot] - str2[diff_spot]`. This comparison is done using unsigned characters.
+* Lexicographically compares the null-terminated string `str1` and `str2`.
 
+* Parameters:
+    * `str1`: The string compared to `str2`
+    * `str2`: The string compared to `str1`
 
-* `char *ft_strcpy(char *dst, const char *src)`
+* Return Value: `0` if the strings are identical. If not, finds the first character differing in the two strings (including `\0`) and returns `str1[diff_spot] - str2[diff_spot]`. This comparison is done using unsigned characters.
 
-    * Copies the string `src` to `dst` (including the terminating `\0` character). If these two strings overlap, behavior is undefined (use `ft_memmove` instead).
 
-    * Parameters:
-        * `dst`: The destination string
-        * `src`: The source string
+#### `char *ft_strcpy(char *dst, const char *src)`
 
-    * Return Value: `dst`
+* Copies the string `src` to `dst` (including the terminating `\0` character). If these two strings overlap, behavior is undefined (use `ft_memmove` instead).
 
+* Parameters:
+    * `dst`: The destination string
+    * `src`: The source string
 
-* `void ft_strdel(char **as)`
+* Return Value: `dst`
 
-    * `free()`s `*as`, then sets it to `NULL`.
 
-    * Parameters:
-        * `as`: A pointer to the memoru address to `free()`
+#### `void ft_strdel(char **as)`
 
-    * Return Value: None
+* `free()`s `*as`, then sets it to `NULL`.
 
+* Parameters:
+    * `as`: A pointer to the memoru address to `free()`
 
-* `char *ft_strdup(const char *str)`
+* Return Value: None
 
-    * Allocates (with `malloc()`) sufficient memory for a copy of `str`, does the copy, and returns a pointer to it.
 
-    * Parameters:
-        * `str`: The string we want to duplicate
+#### `char *ft_strdup(const char *str)`
 
-    * Return Value: A pointer to the newly created duplicate string. `NULL` if allocation fails.
+* Allocates (with `malloc()`) sufficient memory for a copy of `str`, does the copy, and returns a pointer to it.
 
+* Parameters:
+    * `str`: The string we want to duplicate
 
-* `int ft_strequ(char const *str1, char const *str2)`
+* Return Value: A pointer to the newly created duplicate string. `NULL` if allocation fails.
 
-    * Lexicographical comparison between `str1` and `str2`.
 
-    * Parameters:
-        * `str1`: The string to compare to `str2`
-        * `str2`: The string to compare to `str1`
+#### `int ft_strequ(char const *str1, char const *str2)`
 
-    * Return Value: `1` if the strings are identical; `0` otherwise.
+* Lexicographical comparison between `str1` and `str2`.
 
+* Parameters:
+    * `str1`: The string to compare to `str2`
+    * `str2`: The string to compare to `str1`
 
-* `void ft_striter(char *str, void (*f)(char *))`
+* Return Value: `1` if the strings are identical; `0` otherwise.
 
-    * Applies the function `f` to each character of the string `str`. Each character is passed by address to `f` to be modified as necessary.
 
-    * Parameters:
-        * `str`: The string whose characters are passed to `f`
-        * `f`: The function which acts on each character in `str`
+#### `void ft_striter(char *str, void (*f)(char *))`
 
-    * Return Value: None
+* Applies the function `f` to each character of the string `str`. Each character is passed by address to `f` to be modified as necessary.
 
+* Parameters:
+    * `str`: The string whose characters are passed to `f`
+    * `f`: The function which acts on each character in `str`
 
-* `void ft_striteri(char *str, void (*f)(unsigned int, char *))`
+* Return Value: None
 
-    * Applies the function `f` to each character of the string `str`. Each character's index is passed to `f` as well as `str` to be modified as necessary.
 
-    * Parameters:
-        * `str`: The string whose characters are passed to `f`
-        * `f`: The function which acts on each character in `str`
+#### `void ft_striteri(char *str, void (*f)(unsigned int, char *))`
 
-    * Return Value: None
+* Applies the function `f` to each character of the string `str`. Each character's index is passed to `f` as well as `str` to be modified as necessary.
 
+* Parameters:
+    * `str`: The string whose characters are passed to `f`
+    * `f`: The function which acts on each character in `str`
 
-* `char *ft_strjoin(const char *str1, const char *str2)`
+* Return Value: None
 
-    * Allocates (with `malloc()`) and returns a new string, which is the result of the concatenation of `s1` and `s2`
 
-    * Parameters:
-        * `str1`: The prefix string
-        * `str2`: The suffix string
+#### `char *ft_strjoin(const char *str1, const char *str2)`
 
-    * Return Value: The new string. `NULL` if the allocation fails.
+* Allocates (with `malloc()`) and returns a new string, which is the result of the concatenation of `s1` and `s2`
 
+* Parameters:
+    * `str1`: The prefix string
+    * `str2`: The suffix string
 
-* `size_t ft_strlcat(char *dst, const char *src, size_t dstsize)`
+* Return Value: The new string. `NULL` if the allocation fails.
 
-    * Appends the string `src` to the end of `dst`. It will append at most `dstsize - ft_strlen(dst) - 1` characters. It will then NULL-terminate, unless `dstsize` is zero or the original `dst` was longer than `dstsize` (this should not happen as it means either `dstsize` is incorrect or `dst` is not a proper string). If `src` and `dst` overlap, behavior is undefined.
 
-    * Parameters:
-        * `dst`: The destination string
-        * `src`: The string to append to `dst`
-        * `dstsize`: (Ideally) the size of the destination string
-    
-    * Return Value: The total length of the string it tried to create.
+#### `size_t ft_strlcat(char *dst, const char *src, size_t dstsize)`
 
+* Appends the string `src` to the end of `dst`. It will append at most `dstsize - ft_strlen(dst) - 1` characters. It will then NULL-terminate, unless `dstsize` is zero or the original `dst` was longer than `dstsize` (this should not happen as it means either `dstsize` is incorrect or `dst` is not a proper string). If `src` and `dst` overlap, behavior is undefined.
 
-* `size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)`
+* Parameters:
+    * `dst`: The destination string
+    * `src`: The string to append to `dst`
+    * `dstsize`: (Ideally) the size of the destination string
 
-    * Copies up to `dstsize - 1` characters from the string `src` to `dst`, NULL-terminating the result if `dstsize` is not zero. If `src` and `dst` overlap, behavior is undefined.
+* Return Value: The total length of the string it tried to create.
 
-    * Parameters:
-        * `dst`: The destination string
-        * `src`: The string to append to `dst`
-        * `dstsize`: (Ideally) the size of the destination string
-    
-    * Return Value: The total length of the string it tried to create.
 
+#### `size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)`
 
-* `size_t ft_strlen(const char *str)`
+* Copies up to `dstsize - 1` characters from the string `src` to `dst`, NULL-terminating the result if `dstsize` is not zero. If `src` and `dst` overlap, behavior is undefined.
 
-    * Computes the length of the NULL-terminated string `str` (not including the terminating character).
+* Parameters:
+    * `dst`: The destination string
+    * `src`: The string to append to `dst`
+    * `dstsize`: (Ideally) the size of the destination string
 
-    * Parameters:
-        * `str`: The string whose length we want to compute
+* Return Value: The total length of the string it tried to create.
 
-    * Return Value: The number of characters in `str` (up to and not including the terminating character, `\0`)
 
+#### `size_t ft_strlen(const char *str)`
 
-* `char *ft_strmap(const char *str, char (*f)(char))`
+* Computes the length of the NULL-terminated string `str` (not including the terminating character).
 
-    * Applies the function `f` to each character of the string `str` to create a new string (with `malloc()`) resulting from successive applications of `f`. Each character is passed to `f` to be modified as necessary.
+* Parameters:
+    * `str`: The string whose length we want to compute
 
-    * Parameters:
-        * `str`: The string on which to iterate
-        * `f`: The function to apply to each character
+* Return Value: The number of characters in `str` (up to and not including the terminating character, `\0`)
 
-    * Return Value: The string created from the successive applications of `f`. `NULL` if the allocation fails.
 
+#### `char *ft_strmap(const char *str, char (*f)(char))`
 
-* `char *ft_strmapi(const char *str, char (*f)(unsigned int, char))`
+* Applies the function `f` to each character of the string `str` to create a new string (with `malloc()`) resulting from successive applications of `f`. Each character is passed to `f` to be modified as necessary.
 
-    * Applies the function `f` to each character of the string `str` to create a new string (with `malloc()`) resulting from successive applications of `f`. Each character and its index is passed to `f` to be modified as necessary.
+* Parameters:
+    * `str`: The string on which to iterate
+    * `f`: The function to apply to each character
 
-    * Parameters:
-        * `str`: The string on which to iterate
-        * `f`: The function to apply to each character
+* Return Value: The string created from the successive applications of `f`. `NULL` if the allocation fails.
 
-    * Return Value: The string created from the successive applications of `f`. `NULL` if the allocation fails.
 
+#### `char *ft_strmapi(const char *str, char (*f)(unsigned int, char))`
 
-* `char *ft_strncat(char *str1, const char *str2, size_t n)`
+* Applies the function `f` to each character of the string `str` to create a new string (with `malloc()`) resulting from successive applications of `f`. Each character and its index is passed to `f` to be modified as necessary.
 
-    * Appends a `n` characters from the NULL-terminated string `str2` to the end of the NULL-terminated string `str1`, then adds a terminating `\0`. `str1` must have sufficient space to hold the result.
+* Parameters:
+    * `str`: The string on which to iterate
+    * `f`: The function to apply to each character
 
-    * Parameters:
-        * `str1`: The string we are appending to
-        * `str2`: The string we are concatenating
-        * `n`: The number of characters to append
+* Return Value: The string created from the successive applications of `f`. `NULL` if the allocation fails.
 
-    * Return Value: A pointer to `str1`
 
+#### `char *ft_strncat(char *str1, const char *str2, size_t n)`
 
-* `int ft_strncmp(const char *str1, const char *str2, size_t n)`
+* Appends a `n` characters from the NULL-terminated string `str2` to the end of the NULL-terminated string `str1`, then adds a terminating `\0`. `str1` must have sufficient space to hold the result.
 
-    * Lexicographically compares the first `n` characters of the NULL-terminated strings `str1` and `str2`.
+* Parameters:
+    * `str1`: The string we are appending to
+    * `str2`: The string we are concatenating
+    * `n`: The number of characters to append
 
-    * Parameters:
-        * `str1`: The string compared to `str2`
-        * `str2`: The string compared to `str1`
-        * `n`n: The number of characters to compare
+* Return Value: A pointer to `str1`
 
-    * Return Value: `0` if the first `n` characters are identical. If not, finds the first character differing in the two strings (including `\0`) and returns `str1[diff_spot] - str2[diff_spot]`. This comparison is done using unsigned characters.
 
+#### `int ft_strncmp(const char *str1, const char *str2, size_t n)`
 
-* `char *ft_strncpy(char *dst, const char *src, size_t len)`
+* Lexicographically compares the first `n` characters of the NULL-terminated strings `str1` and `str2`.
 
-    * Copies at most `len` characters from `src` to `dst`. If `src` is less then `len` characters long, the remainder of `dst` is filled with `\0` characters. Otherwise `dst` is **not** terminated. These two strings should not overlap, as behavior is undefined.
+* Parameters:
+    * `str1`: The string compared to `str2`
+    * `str2`: The string compared to `str1`
+    * `n`n: The number of characters to compare
 
-    * Parameters:
-        * `dst`: The destination string
-        * `src`: The string copied to `dst`
-        * `len`: The number of characters to copy
+* Return Value: `0` if the first `n` characters are identical. If not, finds the first character differing in the two strings (including `\0`) and returns `str1[diff_spot] - str2[diff_spot]`. This comparison is done using unsigned characters.
 
-    * Return Value: `dst`
 
+#### `char *ft_strncpy(char *dst, const char *src, size_t len)`
 
-* `char *ft_strnew(size_t size)`
+* Copies at most `len` characters from `src` to `dst`. If `src` is less then `len` characters long, the remainder of `dst` is filled with `\0` characters. Otherwise `dst` is **not** terminated. These two strings should not overlap, as behavior is undefined.
 
-    * Allocates (with `malloc()`) and returns a “fresh” string with each character initialized to `\0` (one extra byte is allocated for NULL-termination of this string).
+* Parameters:
+    * `dst`: The destination string
+    * `src`: The string copied to `dst`
+    * `len`: The number of characters to copy
 
-    * Parameters:
-        * `size:` The number of characters the string will contain
+* Return Value: `dst`
 
-    * Return Value: The new string
 
+#### `char *ft_strnew(size_t size)`
 
-* `int ft_strnequ(char const *str1, char const *str2, size_t n)`
+* Allocates (with `malloc()`) and returns a “fresh” string with each character initialized to `\0` (one extra byte is allocated for NULL-termination of this string).
 
-    * Lexicographical comparison between `str1` and `str2` up to `n` characters or until a `\0` is reached.
+* Parameters:
+    * `size:` The number of characters the string will contain
 
-    * Parameters:
-        * `str1`: The string to compare to `str2`
-        * `str2`: The string to compare to `str1`
-        * `n`: The maximum number of characters to compare
+* Return Value: The new string
 
-    * Return Value: `1` if the two strings are identical; `0` otherwise.
 
+#### `int ft_strnequ(char const *str1, char const *str2, size_t n)`
 
-* `char *ft_strnstr(const char *haystack, const char *needle, size_t len)`
+* Lexicographical comparison between `str1` and `str2` up to `n` characters or until a `\0` is reached.
 
-    * Locates the first occurence of the NULL-terminated string `needle` in the string `haystack`, where not more than `len` characters are searched. Characters that appear after a `\0` are not searched.
+* Parameters:
+    * `str1`: The string to compare to `str2`
+    * `str2`: The string to compare to `str1`
+    * `n`: The maximum number of characters to compare
 
-    * Parameters:
-        * `haystack`: The string to be searched
-        * `needle`: The string we are looking for in `haystack`
-        * `len`: The number of characters to compare
+* Return Value: `1` if the two strings are identical; `0` otherwise.
 
-    * Return Value: If `needle` is an empty string, `haystack is returned`. If needle occurs nowhere in `haystack`, `NULL` is returned; otherwise a pointer to the first character of the occurence of `needle` in `haystack` is returned.
 
+#### `char *ft_strnstr(const char *haystack, const char *needle, size_t len)`
 
-* `char *ft_strrchr(const char *str, int c)`
+* Locates the first occurence of the NULL-terminated string `needle` in the string `haystack`, where not more than `len` characters are searched. Characters that appear after a `\0` are not searched.
 
-    * Locates the last occurence of `c` (converted to a `char`) in the string pointed to by `str`. The terminating `\0` is considered to be part of the string.
+* Parameters:
+    * `haystack`: The string to be searched
+    * `needle`: The string we are looking for in `haystack`
+    * `len`: The number of characters to compare
 
-    * Parameters:
-        * `str`: The string we are searching
-        * `c`: The character we are looking for in `str`
+* Return Value: If `needle` is an empty string, `haystack is returned`. If needle occurs nowhere in `haystack`, `NULL` is returned; otherwise a pointer to the first character of the occurence of `needle` in `haystack` is returned.
 
-    * Return Value: A pointer to the located character, or `NULL` if it does not appear in the string.
 
+#### `char *ft_strrchr(const char *str, int c)`
 
-* `char *ft_strstr(const char *haystack, const char *needle)`
+* Locates the last occurence of `c` (converted to a `char`) in the string pointed to by `str`. The terminating `\0` is considered to be part of the string.
 
-    * Locates the first occurence of the NULL-terminated string `needle` in the string `haystack`. Characters that appear after a `\0` are not searched.
+* Parameters:
+    * `str`: The string we are searching
+    * `c`: The character we are looking for in `str`
 
-    * Parameters:
-        * `haystack`: The string to be searched
-        * `needle`: The string we are looking for in `haystack`
+* Return Value: A pointer to the located character, or `NULL` if it does not appear in the string.
 
-    * Return Value: If `needle` is an empty string, `haystack is returned`. If needle occurs nowhere in `haystack`, `NULL` is returned; otherwise a pointer to the first character of the occurence of `needle` in `haystack` is returned.
 
+#### `char *ft_strstr(const char *haystack, const char *needle)`
 
-* `char *ft_strtrim(const char *str, const char *set)`
-    * Allocates (with `malloc()`) and returns a copy of `str` with the characters specified in `set` removed from the beginning and the end of the string.
+* Locates the first occurence of the NULL-terminated string `needle` in the string `haystack`. Characters that appear after a `\0` are not searched.
 
-    * Parameters:
-        * `str`: The string to be trimmed
-        * `set`: The reference set of characters to trim from `str`
+* Parameters:
+    * `haystack`: The string to be searched
+    * `needle`: The string we are looking for in `haystack`
 
-    * Return Value: The trimmed string. `NULL` if the allocation fails.
+* Return Value: If `needle` is an empty string, `haystack is returned`. If needle occurs nowhere in `haystack`, `NULL` is returned; otherwise a pointer to the first character of the occurence of `needle` in `haystack` is returned.
 
 
-* `char *ft_substr(const char *str, unsigned int start, size_t len)`
+#### `char *ft_strtrim(const char *str, const char *set)`
 
-    * Allocates (with `malloc()`) and returns a substring from the string `s`. The substring begins at index `start` and is of maximum size `len`.
+* Allocates (with `malloc()`) and returns a copy of `str` with the characters specified in `set` removed from the beginning and the end of the string.
 
-    *  Parameters:
-        * `str`: The string from which to create the substring
-        * `start`: The start index of the substring in the string ’s’
-        * `len`: The maximum length of the substring
+* Parameters:
+    * `str`: The string to be trimmed
+    * `set`: The reference set of characters to trim from `str`
 
-    * Return Value: The substring. `NULL` if the allocation fails.
+* Return Value: The trimmed string. `NULL` if the allocation fails.
 
 
-* `int ft_tolower(int c)`
+#### `char *ft_substr(const char *str, unsigned int start, size_t len)`
 
-    * Converts a capital letter to the corresponding lowercase letter. The argument must be representable as an `unsigned char` or the value `EOF`.
+* Allocates (with `malloc()`) and returns a substring from the string `s`. The substring begins at index `start` and is of maximum size `len`.
 
-    * Parameters:
-        * `c`: The character to make lowercase
+*  Parameters:
+    * `str`: The string from which to create the substring
+    * `start`: The start index of the substring in the string ’s’
+    * `len`: The maximum length of the substring
 
-    * Return Value: If the argument is a capital letter, we return the corresponding lowercase letter. If not, `c` is returned.
+* Return Value: The substring. `NULL` if the allocation fails.
 
 
-* `int ft_toupper(int c)`
+#### `int ft_tolower(int c)`
 
-    * Converts a lowercase letter to the corresponding capital letter. The argument must be representable as an `unsigned char` or the value `EOF`.
+* Converts a capital letter to the corresponding lowercase letter. The argument must be representable as an `unsigned char` or the value `EOF`.
 
-    * Parameters:
-        * `c`: The character to capitalize
+* Parameters:
+    * `c`: The character to make lowercase
 
-    * Return Value: If the argument is a lowercase letter, we return the corresponding capital letter. If not, `c` is returned.
+* Return Value: If the argument is a capital letter, we return the corresponding lowercase letter. If not, `c` is returned.
+
+
+#### `int ft_toupper(int c)`
+
+* Converts a lowercase letter to the corresponding capital letter. The argument must be representable as an `unsigned char` or the value `EOF`.
+
+* Parameters:
+    * `c`: The character to capitalize
+
+* Return Value: If the argument is a lowercase letter, we return the corresponding capital letter. If not, `c` is returned.
 
 ---
 
 ## Memory Manipulation
-* [ft_calloc]()
+
+#### `void * ft_calloc(size_t count, size_t size)`
+
+* Allocates (with `malloc()`) contiguously allocates enough space for `count` objects that are each `size` bytes of memory. The allocated memory is filled with bytes of value zero.
+
+* Parameters:
+    * `count`: The number of times to allocate `size` bytes of memory
+    * `size`: The size of each block of memory we are allocating
+
+* Return Value: A pointer to the beginning of the allocated block of memory. If allocation fails, `NULL` is returned.
+
+
 * `void * ft_memalloc(size_t size)`
 
     * Allocates (with `malloc()`) and returns a “fresh” memory area. The memory allocated is initialized to 0.
