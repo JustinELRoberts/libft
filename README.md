@@ -3,85 +3,85 @@
 ## Table of contents
 * ### [String Manipulation](#String-Manipulation-1)
     * [ft_atoi](#int-ft_atoiconst-char-str)
-    * [ft_bzero]()
-    * [ft_isalnum]()
-    * [ft_isalpha]()
-    * [ft_isascii]()
-    * [ft_isdigit]()
-    * [ft_isprint]()
-    * [ft_itoa]()
-    * [ft_putchar]()
-    * [ft_putchar_fd]()
-    * [ft_putendl]()
-    * [ft_putendl_fd]()
-    * [ft_putnbr]()
-    * [ft_putnbr_fd]()
-    * [ft_putnstr]()
-    * [ft_putnstr_fd]()
-    * [ft_putstr]()
-    * [ft_putstr_fd]()
-    * [ft_split]()
-    * [ft_strcat]()
-    * [ft_strchr]()
-    * [ft_strclr]()
-    * [ft_strcmp]()
-    * [ft_strcpy]()
-    * [ft_strdel]()
-    * [ft_strdup]()
-    * [ft_strequ]()
-    * [ft_striter]()
-    * [ft_striteri]()
-    * [ft_strjoin]()
-    * [ft_strlcat]()
-    * [ft_strlcpy]()
-    * [ft_strlen]()
-    * [ft_strmap]()
-    * [ft_strmapi]()
-    * [ft_strncat]()
-    * [ft_strncmp]()
-    * [ft_strncpy]()
-    * [ft_strnew]()
-    * [ft_strnequ]()
-    * [ft_strnstr]()
-    * [ft_strrchr]()
-    * [ft_strstr]()
-    * [ft_strtrim]()
-    * [ft_substr]()
-    * [ft_tolower]()
-    * [ft_toupper]()
+    * [ft_bzero](#void-ft_bzerovoid-str-size_t-n)
+    * [ft_isalnum](#int-ft_isalnumint-c)
+    * [ft_isalpha](#int-ft_isalphaint-c)
+    * [ft_isascii](#int-ft_isasciiint-c)
+    * [ft_isdigit](#int-ft_isdigitint-c)
+    * [ft_isprint](#int-ft_isprintint-c)
+    * [ft_itoa](#char-ft_itoaint-n)
+    * [ft_putchar](#void-ft_putcharchar-c)
+    * [ft_putchar_fd](#void-ft_putchar_fdchar-c-int-fd)
+    * [ft_putendl](#void-ft_putendlchar-str)
+    * [ft_putendl_fd](#void-ft_putendl_fdchar-str-int-fd)
+    * [ft_putnbr](#void-ft_putnbrint-n)
+    * [ft_putnbr_fd](#void-ft_putnbr_fdint-n-int-fd)
+    * [ft_putnstr](#void-ft_putnstrchar-str)
+    * [ft_putnstr_fd](#void-ft_putnstr_fdchar-str-int-fd)
+    * [ft_putstr](#void-ft_putstrchar-str)
+    * [ft_putstr_fd](#void-ft_putstr_fdchar-str-int-fd)
+    * [ft_split](#char-ft_splitconst-char-str-char-c)
+    * [ft_strcat](#char-ft_strcatchar-str1-const-char-str2)
+    * [ft_strchr](#char-ft_strchrconst-char-str-int-c)
+    * [ft_strclr](#void-ft_strclrchar-str)
+    * [ft_strcmp](#int-ft_strcmpconst-char-str1-const-char-str2)
+    * [ft_strcpy](#char-ft_strcpychar-dst-const-char-src)
+    * [ft_strdel](#void-ft_strdelchar-as)
+    * [ft_strdup](#char-ft_strdupconst-char-str)
+    * [ft_strequ](#int-ft_strequchar-const-str1-char-const-str2)
+    * [ft_striter](#void-ft_striterchar-str-void-fchar-)
+    * [ft_striteri](#void-ft_striterichar-str-void-funsigned-int-char-)
+    * [ft_strjoin](#char-ft_strjoinconst-char-str1-const-char-str2)
+    * [ft_strlcat](#size_t-ft_strlcatchar-dst-const-char-src-size_t-dstsize)
+    * [ft_strlcpy](#size_t-ft_strlcpychar-dst-const-char-src-size_t-dstsize)
+    * [ft_strlen](#size_t-ft_strlenconst-char-str)
+    * [ft_strmap](#char-ft_strmapconst-char-str-char-fchar)
+    * [ft_strmapi](#char-ft_strmapiconst-char-str-char-funsigned-int-char)
+    * [ft_strncat](#char-ft_strncatchar-str1-const-char-str2-size_t-n)
+    * [ft_strncmp](#int-ft_strncmpconst-char-str1-const-char-str2-size_t-n)
+    * [ft_strncpy](#char-ft_strncpychar-dst-const-char-src-size_t-len)
+    * [ft_strnew](#char-ft_strnewsize_t-size)
+    * [ft_strnequ](#int-ft_strnequchar-const-str1-char-const-str2-size_t-n)
+    * [ft_strnstr](#char-ft_strnstrconst-char-haystack-const-char-needle-size_t-len)
+    * [ft_strrchr](#char-ft_strrchrconst-char-str-int-c)
+    * [ft_strstr](#char-ft_strstrconst-char-haystack-const-char-needle)
+    * [ft_strtrim](#char-ft_strtrimconst-char-str-const-char-set)
+    * [ft_substr](#char-ft_substrconst-char-str-unsigned-int-start-size_t-len)
+    * [ft_tolower](#int-ft_tolowerint-c)
+    * [ft_toupper](#int-ft_toupperint-c)
 
 * ### [Memory Manipulation](#Memory-Manipulation-1)
-    * [ft_calloc]()
-    * [ft_memalloc]()
-    * [ft_memcpy]()
-    * [ft_memccpy]()
-    * [ft_memchr]()
-    * [ft_memcmp]()
-    * [ft_memdel]()
-    * [ft_memmove]()
-    * [ft_memset]()
+    * [ft_calloc](#void-ft_callocsize_t-count-size_t-size)
+    * [ft_memalloc](#void-t_memallocsize_t-size)
+    * [ft_memccpy](#void-ft_memccpyvoid-dst-const-void-src-int-c-size_t-n)
+    * [ft_memcpy](#void-ft_memcpyvoid-dst-const-void-src-size_t-n)
+    * [ft_memchr](#void-ft_memchrconst-void-str-int-c-size_t-n)
+    * [ft_memcmp](#int-ft_memcmpconst-void-str1-const-void-str2-size_t-n)
+    * [ft_memdel](#void-ft_memdelvoid-ap)
+    * [ft_memmove](#void-ft_memmovevoid-dst-const-void-src-size_t-len)
+    * [ft_memset](#void-ft_memsetvoid-b-int-c-size_t-len)
 
 * ### [Linked Lists](#Linked-Lists-1)
-    * [ft_lstadd_back]()
-    * [ft_lstadd_front]()
-    * [ft_lstclear]()
-    * [ft_lstdelone]()
-    * [ft_lstfind]()
-    * [ft_lstins_after]()
-    * [ft_lstiter]()
-    * [ft_lstlast]()
-    * [ft_lstmap]()
-    * [ft_lstnew]()
-    * [ft_lstsize]()
+    * [ft_lstadd_back](#void-ft_lstadd_backt_list-alst-t_list-new)
+    * [ft_lstadd_front](#void-ft_lstadd_frontt_list-alst-t_list-new)
+    * [ft_lstclear](#void-ft_lstcleart_list-alst-void-delvoid-)
+    * [ft_lstdelone](#void-ft_lstdelonet_list-lst-void-delvoid-)
+    * [ft_lstfind](#t_list-ft_lstfindt_list-lst-void-content)
+    * [ft_lstins_after](#int-ft_lstins_aftert_list-oldlink-t_list-newlink)
+    * [ft_lstiter](#void-ft_lstitert_list-lst-void-fvoid-)
+    * [ft_lstlast](#t_list-ft_lstlastt_list-lst)
+    * [ft_lstmap](#t_list-ft_lstmapt_list-lst-void-fvoid--void-delvoid-)
+    * [ft_lstnew](#t_list-ft_lstnewvoid-content)
+    * [ft_lstsize](#int-ft_lstsizet_list-lst)
     
 * ### [Matrices](#Matrices-1)
-    * [matcreate]()
-    * [matdestroy]()
-    * [matdet]()
-    * [matinverse]()
-    * [matmult]()
-    * [matnorm]()
-    * [mattranspose]()
+    * [ft_matcreate](#t_matrix-ft_matcreateint-n_rows-int-n_cols)
+    * [ft_matdestroy](#void-ft_matdestroyt_matrix-matrix)
+    * [ft_matdet](#double-ft_matdett_matrix-matrix)
+    * [ft_matinverse](#t_matrix-ft_matinverset_matrix-matrix)
+    * [ft_matmult](#t_matrix-ft_matmultt_matrix-matrix1-t_matrix-matrix2)
+    * [ft_matnorm](#double-ft_matnormt_matrix-matrix)
+    * [ft_mattranspose](#t_matrix-ft_mattransposet_matrix-matrix)
 
 ___
 ---
@@ -139,7 +139,7 @@ ___
 * Return Value: `1` if the above condition is true; `0` otherwise.
 
 
-`int ft_isdigit(int c)`
+#### `int ft_isdigit(int c)`
 
 * Tests for a digit character, which is any char between `'0'` and `'9'` inclusive.
 
@@ -232,7 +232,7 @@ ___
 * Return Value: None
 
 
-#### `void ft_putnstr_fd(char *str)`
+#### `void ft_putnstr(char *str)`
 
 * Outputs n characters from the string `str` to the standard output.
 
@@ -253,7 +253,7 @@ ___
 * Return Value: None
 
 
-#### `void ft_putstr_fd(char *str)`
+#### `void ft_putstr(char *str)`
 
 * Outputs the string `str` to the standard output.
 
@@ -597,7 +597,7 @@ ___
 
 ## Memory Manipulation
 
-#### `void * ft_calloc(size_t count, size_t size)`
+#### `void *ft_calloc(size_t count, size_t size)`
 
 * Allocates (with `malloc()`) contiguously allocates enough space for `count` objects that are each `size` bytes of memory. The allocated memory is filled with bytes of value zero.
 
@@ -608,95 +608,95 @@ ___
 * Return Value: A pointer to the beginning of the allocated block of memory. If allocation fails, `NULL` is returned.
 
 
-* `void * ft_memalloc(size_t size)`
+#### `void *ft_memalloc(size_t size)`
 
-    * Allocates (with `malloc()`) and returns a “fresh” memory area. The memory allocated is initialized to 0.
+* Allocates (with `malloc()`) and returns a “fresh” memory area. The memory allocated is initialized to 0.
 
-    * Parameters:
-        * `size`: The number of bytes to allocate
+* Parameters:
+    * `size`: The number of bytes to allocate
 
-    * Return Value: A pointer to the beginning of the allocated memory. `NULL` if the allocation fails.
-
-
-* `void *ft_memccpy(void *dst, const void *src, int c, size_t n)`
-
-    * Copies bytes from `src` to `dst`. If `c` (converted to an `unsigned char`) occurs in `src`, the copy stops and a pointer to the byte after the copy of `c` in the string `dst` is returned. Otherwise, `n` bytes are copied, and a `NULL` pointer is returned.
-
-    * Parameters:
-        * `dst`: The destination string
-        * `src`: The source string
-        * `c`: The character to check for
-        * `n`: The number of bytes to copy
+* Return Value: A pointer to the beginning of the allocated memory. `NULL` if the allocation fails.
 
 
-* `void *ft_memcpy(void *dst, const void *src, size_t n)`
+#### `void *ft_memccpy(void *dst, const void *src, int c, size_t n)`
 
-    * Copies `n` bytes from the memory area `src` to the memory area `dst`. If `src` and `dst` overlap, behavior is undefined (use `ft_memmove()` instead).
+* Copies bytes from `src` to `dst`. If `c` (converted to an `unsigned char`) occurs in `src`, the copy stops and a pointer to the byte after the copy of `c` in the string `dst` is returned. Otherwise, `n` bytes are copied, and a `NULL` pointer is returned.
 
-    * Parameters:
-        * `dst`: The destination memory area
-        * `src`: The source memory area
-        * `n`: The number of bytes to copy
-
-    * Return Value: The original value of `dst`.
-
-
-* `void *ft_memchr(const void *str, int c, size_t n)`
-
-    * Locates the first occurence of `c` (converted to an `unsigned char`) in the string `str`. A maximum of `n` bytes are searched.
-
-    * Parameters:
-        * `str`: The string to search
-        * `c`: Converted to an unsigned char then searched for in `str`
-        * `n`: The number 
-
-    * Return Value: A pointer to the byte located, or `NULL` if no byte exists within `n` bytes.
+* Parameters:
+    * `dst`: The destination string
+    * `src`: The source string
+    * `c`: The character to check for
+    * `n`: The number of bytes to copy
 
 
-* `int ft_memcmp(const void *str1, const void *str2, size_t n)`
+#### `void *ft_memcpy(void *dst, const void *src, size_t n)`
 
-    * Compares the first `n` bytes of `str1` to `str2`.
+* Copies `n` bytes from the memory area `src` to the memory area `dst`. If `src` and `dst` overlap, behavior is undefined (use `ft_memmove()` instead).
 
-    * Parameters:
-        * `str1`: String to compare to `str2`
-        * `str2`: String to compare to `str1`
-        * `n`: Number of bytes to compare
+* Parameters:
+    * `dst`: The destination memory area
+    * `src`: The source memory area
+    * `n`: The number of bytes to copy
 
-    * Return Value: `0` if the strings are identical. If not, finds the first character differing in the two strings (including `\0`) and returns `str1[diff_spot] - str2[diff_spot]`. This comparison is done using unsigned characters.
-
-
-* `void ft_memdel(void **ap)`
-
-    * `free()`s `*ap` and sets it to NULL.
-
-    * Parameters:
-        * `ap`: A pointer to the memory address to be freed
-
-    * Return Value: None
+* Return Value: The original value of `dst`.
 
 
-* `void *ft_memmove(void *dst, const void *src, size_t len)`
+#### `void *ft_memchr(const void *str, int c, size_t n)`
 
-    * Copies `len` bytes from `src` to `dst`. The two may overlap; the copy is always done in a non-destructive manner.
+* Locates the first occurence of `c` (converted to an `unsigned char`) in the string `str`. A maximum of `n` bytes are searched.
 
-    * Parameters:
-        * `dst`: The destination buffer
-        * `src`: The source to copy from
-        * `len`: The number of bytes to copy
+* Parameters:
+    * `str`: The string to search
+    * `c`: Converted to an unsigned char then searched for in `str`
+    * `n`: The number 
 
-    * Return Value: The original value of `dst`
+* Return Value: A pointer to the byte located, or `NULL` if no byte exists within `n` bytes.
 
 
-* `void *ft_memset(void *b, int c, size_t len)`
+#### `int ft_memcmp(const void *str1, const void *str2, size_t n)`
 
-    * Writes `len` bytes of the value `c` (converted to an `unsigned char`) to the string `b`.
+* Compares the first `n` bytes of `str1` to `str2`.
 
-    * Parameters:
-        * `b`: The buffer we are writing to
-        * `c`: The value (converted to an `unsigned char`) written to `b`
-        * `len`: The number of times to write `c` to `b`
+* Parameters:
+    * `str1`: String to compare to `str2`
+    * `str2`: String to compare to `str1`
+    * `n`: Number of bytes to compare
 
-    * Return Value: `b`
+* Return Value: `0` if the strings are identical. If not, finds the first character differing in the two strings (including `\0`) and returns `str1[diff_spot] - str2[diff_spot]`. This comparison is done using unsigned characters.
+
+
+#### `void ft_memdel(void **ap)`
+
+* `free()`s `*ap` and sets it to NULL.
+
+* Parameters:
+    * `ap`: A pointer to the memory address to be freed
+
+* Return Value: None
+
+
+#### `void *ft_memmove(void *dst, const void *src, size_t len)`
+
+* Copies `len` bytes from `src` to `dst`. The two may overlap; the copy is always done in a non-destructive manner.
+
+* Parameters:
+    * `dst`: The destination buffer
+    * `src`: The source to copy from
+    * `len`: The number of bytes to copy
+
+* Return Value: The original value of `dst`
+
+
+#### `void *ft_memset(void *b, int c, size_t len)`
+
+* Writes `len` bytes of the value `c` (converted to an `unsigned char`) to the string `b`.
+
+* Parameters:
+    * `b`: The buffer we are writing to
+    * `c`: The value (converted to an `unsigned char`) written to `b`
+    * `len`: The number of times to write `c` to `b`
+
+* Return Value: `b`
 
 
 ---
@@ -713,127 +713,127 @@ typedef struct          s_list
 ```
 &nbsp;
 
-* `void ft_lstadd_back(t_list **alst, t_list *new)`
+#### `void ft_lstadd_back(t_list **alst, t_list *new)`
 
-    * Adds the link `new` to the end of a linked list.
+* Adds the link `new` to the end of a linked list.
 
-    * Parameters:
-        * `alst`: The address of a pointer to the first link of the linked list
-        * `new`: A pointer to the new link being appended to the linked list
+* Parameters:
+    * `alst`: The address of a pointer to the first link of the linked list
+    * `new`: A pointer to the new link being appended to the linked list
 
-    * Return Value: None
-
-
-* `void ft_lstadd_front(t_list **alst, t_list *new)`
-
-    * Adds the link `new` to the beginning of a linked list.
-
-    * Parameters:
-        * `alst`: The address of a pointer to the first link of the linked list
-        * `new`: A pointer to the new link being prepended to the linked list
-
-    * Return Value: None
+* Return Value: None
 
 
-* `void ft_lstclear(t_list **alst, void (*del)(void *))`
+#### `void ft_lstadd_front(t_list **alst, t_list *new)`
 
-    * Deletes and frees the given link and every successor to it, using the function `del` and `free()`.  `alst` and `*alst` are then set to `NULL`.
+* Adds the link `new` to the beginning of a linked list.
 
-    * Parameters:
-        * `alst`: The address of a pointer to a link
-        * `del`: The address of the function used to delete the content of a link
+* Parameters:
+    * `alst`: The address of a pointer to the first link of the linked list
+    * `new`: A pointer to the new link being prepended to the linked list
 
-    Return Value: None
-
-
-* `void ft_lstdelone(t_list *lst, void (*del)(void *))`
-
-    * Frees the memory of a link's `content` using the function `del`. The memory of `next` is not freed.
-
-    * Parameters:
-        * `lst`: The link to free
-        * `del`: The address of the fuction used to delete `lst`'s `content`
-
-    * Return Value: None
+* Return Value: None
 
 
-* `t_list *ft_lstfind(t_list *lst, void *content)`
+#### `void ft_lstclear(t_list **alst, void (*del)(void *))`
 
-    * Finds and returns a pointer to the first link in the linked list `*lst` whose `content` member is equal to the argument `content`.
+* Deletes and frees the given link and every successor to it, using the function `del` and `free()`.  `alst` and `*alst` are then set to `NULL`.
 
-    * Parameters:
-        * `lst`: The linked list we are searching
-        * `content`: What we are searching for in `lst`
+* Parameters:
+    * `alst`: The address of a pointer to a link
+    * `del`: The address of the function used to delete the content of a link
 
-    * Return Value: A pointer to the link whose `content` member is the argument `content`. If there is no link in the linked list where this occurs, we return `NULL`.
-
-
-* `int ft_lstins_after(t_list *oldlink, t_list *newlink)`
-
-    * Sets the link `oldlink`'s member `next` to point to `newlink`.
-
-    * Parameters:
-        * `oldlink`: The link whose `next` member we want to change
-        * `newlink`: The link we want `oldlink`'s `next` member to point to
-
-    * Return Value: If the operation is successful, return `1`. If `oldlink` is `NULL`, return `0`.
+Return Value: None
 
 
-* `void ft_lstiter(t_list *lst, void (*f)(void *))`
+#### `void ft_lstdelone(t_list *lst, void (*del)(void *))`
 
-    * Iterates through the linked list `lst` and applies the function `f` to the `content` of each link.
+* Frees the memory of a link's `content` using the function `del`. The memory of `next` is not freed.
 
-    * Parameters:
-        * `lst`: A pointer to the first link a linked list
-        * `f`: The address of the function which we will apply to each link's `content`
+* Parameters:
+    * `lst`: The link to free
+    * `del`: The address of the fuction used to delete `lst`'s `content`
 
-    * Return Value: None
-
-
-* `t_list *ft_lstlast(t_list *lst)`
-
-    * Returns the last link of a linked list.
-
-    * Parameters:
-        * `lst`: A pointer to the first link of the linked list
-
-    * Return Value: The last link of `lst`
+* Return Value: None
 
 
-* `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))`
+#### `t_list *ft_lstfind(t_list *lst, void *content)`
 
-    * Iterates through the linked list `lst` and applies the function `f` to the `content` of each link. Creates and returns a new list resulting of the successive applications of this function. The `del` function is used to delete the content of an element if allocation fails.
+* Finds and returns a pointer to the first link in the linked list `*lst` whose `content` member is equal to the argument `content`.
 
-    * Parameters:
-        * `lst`: A pointer to the first link of the linked list
-        * `f`: The function to apply to the `content` of each link in `lst`
-        * `del`: Used to delete a link's `content` if allocation of a link fails
+* Parameters:
+    * `lst`: The linked list we are searching
+    * `content`: What we are searching for in `lst`
 
-    * Return Value: The new linked list. `NULL` if allocation fails.
-
-
-* `t_list *ft_lstnew(void *content)`
-
-    * Allocates (with `malloc()`) and returns a new link. The member `content` is initialized with the value of the parameter `content`. The member `next` is initialized to `NULL`.
-
-    * Parameters:
-        * `content`: The data to create the link with
-
-    * Return Value: The new link.
+* Return Value: A pointer to the link whose `content` member is the argument `content`. If there is no link in the linked list where this occurs, we return `NULL`.
 
 
-* `int ft_lstsize(t_list *lst)`
+#### `int ft_lstins_after(t_list *oldlink, t_list *newlink)`
 
-    * Counts the number of links in a linked list.
+* Sets the link `oldlink`'s member `next` to point to `newlink`.
 
-    * Parameters:
-        * `lst`: A pointer to the first link of the linked list
+* Parameters:
+    * `oldlink`: The link whose `next` member we want to change
+    * `newlink`: The link we want `oldlink`'s `next` member to point to
 
-    * Return Value: The number of links in `lst`.
+* Return Value: If the operation is successful, return `1`. If `oldlink` is `NULL`, return `0`.
 
+
+#### `void ft_lstiter(t_list *lst, void (*f)(void *))`
+
+* Iterates through the linked list `lst` and applies the function `f` to the `content` of each link.
+
+* Parameters:
+    * `lst`: A pointer to the first link a linked list
+    * `f`: The address of the function which we will apply to each link's `content`
+
+* Return Value: None
+
+
+#### `t_list *ft_lstlast(t_list *lst)`
+
+* Returns the last link of a linked list.
+
+* Parameters:
+    * `lst`: A pointer to the first link of the linked list
+
+* Return Value: The last link of `lst`
+
+
+#### `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))`
+
+* Iterates through the linked list `lst` and applies the function `f` to the `content` of each link. Creates and returns a new list resulting of the successive applications of this function. The `del` function is used to delete the content of an element if allocation fails.
+
+* Parameters:
+    * `lst`: A pointer to the first link of the linked list
+    * `f`: The function to apply to the `content` of each link in `lst`
+    * `del`: Used to delete a link's `content` if allocation of a link fails
+
+* Return Value: The new linked list. `NULL` if allocation fails.
+
+
+#### `t_list *ft_lstnew(void *content)`
+
+* Allocates (with `malloc()`) and returns a new link. The member `content` is initialized with the value of the parameter `content`. The member `next` is initialized to `NULL`.
+
+* Parameters:
+    * `content`: The data to create the link with
+
+* Return Value: The new link.
+
+
+#### `int ft_lstsize(t_list *lst)`
+
+* Counts the number of links in a linked list.
+
+* Parameters:
+    * `lst`: A pointer to the first link of the linked list
+
+* Return Value: The number of links in `lst`.
 
 
 ---
+
 
 ## Matrices
 The following struct is used to represent a matrix and will be referenced throughout in this section:
@@ -847,73 +847,73 @@ typedef struct    s_matrix
 ```
 &nbsp;
 
-* `t_matrix *ft_matcreate(int n_rows, int n_cols)`
+#### `t_matrix *ft_matcreate(int n_rows, int n_cols)`
 
-    * Allocates (using `malloc()`) a `struct s_matrix` which has `n_rows` rows and `n_cols` columns. Note that the first index of the `content` member represents the rows, and the second represents the column.
+* Allocates (using `malloc()`) a `struct s_matrix` which has `n_rows` rows and `n_cols` columns. Note that the first index of the `content` member represents the rows, and the second represents the column.
 
-    * Parameters:
-        * `n_rows`: The number of rows
-        * `n_cols`: The number of columns
+* Parameters:
+    * `n_rows`: The number of rows
+    * `n_cols`: The number of columns
 
-    * Return Value: A pointer to the newly allocated matrix. `NULL` is returned if allocation fails.
-
-
-* `void ft_matdestroy(t_matrix *matrix)`
-
-    * Frees (using `free()`) the `content` member of the matrix pointed to by `matrix` as well as `matrix` itself. Sets `matrix` to point to `NULL`.
-
-    * Parameters:
-        * `matrix`: The `struct s_matrix` we want to delete
-
-    * Return Value: None
+* Return Value: A pointer to the newly allocated matrix. `NULL` is returned if allocation fails.
 
 
-* `double ft_matdet(t_matrix *matrix)`
+#### `void ft_matdestroy(t_matrix *matrix)`
 
-    * Computes and returns the determinant of the matrix `matrix`.
+* Frees (using `free()`) the `content` member of the matrix pointed to by `matrix` as well as `matrix` itself. Sets `matrix` to point to `NULL`.
 
-    * Parameters:
-        * `matrix`: The matrix whose determinant we seek
+* Parameters:
+    * `matrix`: The `struct s_matrix` we want to delete
 
-    * Return Value: The determinant of `matrix`
-
-
-* `t_matrix *ft_matinverse(t_matrix *matrix)`
-
-    * Computes and returns the inverse of the matrix `matrix`. Note that `matrix` must be a square matrix (i.e. `n_rows == n_cols`).
-
-    * Parameters:
-        * `matrix`: The matrix whose inverse we seek
-
-    * Return Value: The inverse of `matrix`. If `matrix` is not square, `NULL` is returned.
+* Return Value: None
 
 
-* `t_matrix *ft_matmult(t_matrix *matrix1, t_matrix *matrix2)`
+#### `double ft_matdet(t_matrix *matrix)`
 
-    * Allocates (with `malloc()`) memory for a matrix for the result of `matrix1` times `matrix2` and returns the result of this operation. Note that if `matrix1` is an `n_rows1` by `n_cols1` matrix and `matrix2` is a `n_rows2` by `n_cols2` matrix, the result will be a `n_rows1` by `n_cols2` matrix (matrix multiplication does not commute).
+* Computes and returns the determinant of the matrix `matrix`.
 
-    * Parameters:
-        * `matrix1`: The matrix on the left side of the operation
-        * `matrix2`: The matrix on the right side of the operation
+* Parameters:
+    * `matrix`: The matrix whose determinant we seek
 
-    * Return Value: The result of `matrix1` times `matrix2`. If allocation for this result fails, `NULL` is returned.
-
-
-* `double ft_matnorm(t_matrix *matrix)`
-
-    * Computes and returns the norm of a vector (i.e. a `1` by `n_cols` or `n_rows` by `1` `struct s_matrix`). The norm is calculated as the square root of the sum of the square of each component.
-
-    * Parameters:
-        * `matrix`: The vector whose norm we seek
-
-    * Return Value: If `matrix` is a vector, we return its norm; otherwise we return `NULL`.
+* Return Value: The determinant of `matrix`
 
 
-* `t_matrix *ft_mattranspose(t_matrix *matrix)`
+#### `t_matrix *ft_matinverse(t_matrix *matrix)`
 
-    * Allocates (with `malloc()`) memory for a matrix for the transpose of `matrix`. The transpose is defined such that `transpose->content[row][col]` = `matrix->content[col][row]`. Note that this means that if `matrix` is an `n` by `m` matrix, the returned value will be an `m` by `n` matrix.
+* Computes and returns the inverse of the matrix `matrix`. Note that `matrix` must be a square matrix (i.e. `n_rows == n_cols`).
 
-    * Parameters:
-        * `matrix`: The matrix whose transpose we seek
+* Parameters:
+    * `matrix`: The matrix whose inverse we seek
 
-    * Return Value: The newly create matrix which is transpose of `matrix`. If allocation fails, `NULL` is returned.
+* Return Value: The inverse of `matrix`. If `matrix` is not square, `NULL` is returned.
+
+
+#### `t_matrix *ft_matmult(t_matrix *matrix1, t_matrix *matrix2)`
+
+* Allocates (with `malloc()`) memory for a matrix for the result of `matrix1` times `matrix2` and returns the result of this operation. Note that if `matrix1` is an `n_rows1` by `n_cols1` matrix and `matrix2` is a `n_rows2` by `n_cols2` matrix, the result will be a `n_rows1` by `n_cols2` matrix (matrix multiplication does not commute).
+
+* Parameters:
+    * `matrix1`: The matrix on the left side of the operation
+    * `matrix2`: The matrix on the right side of the operation
+
+* Return Value: The result of `matrix1` times `matrix2`. If allocation for this result fails, `NULL` is returned.
+
+
+#### `double ft_matnorm(t_matrix *matrix)`
+
+* Computes and returns the norm of a vector (i.e. a `1` by `n_cols` or `n_rows` by `1` `struct s_matrix`). The norm is calculated as the square root of the sum of the square of each component.
+
+* Parameters:
+    * `matrix`: The vector whose norm we seek
+
+* Return Value: If `matrix` is a vector, we return its norm; otherwise we return `NULL`.
+
+
+#### `t_matrix *ft_mattranspose(t_matrix *matrix)`
+
+* Allocates (with `malloc()`) memory for a matrix for the transpose of `matrix`. The transpose is defined such that `transpose->content[row][col]` = `matrix->content[col][row]`. Note that this means that if `matrix` is an `n` by `m` matrix, the returned value will be an `m` by `n` matrix.
+
+* Parameters:
+    * `matrix`: The matrix whose transpose we seek
+
+* Return Value: The newly create matrix which is transpose of `matrix`. If allocation fails, `NULL` is returned.
