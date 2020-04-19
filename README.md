@@ -681,7 +681,6 @@ typedef struct          s_list
         struct s_list   *next;
 }                       t_list;
 ```
-&nbsp;
 
 #### `void ft_lstadd_back(t_list **alst, t_list *new)`
 
@@ -815,7 +814,6 @@ typedef struct    s_matrix
         double    **content;
 }                 t_matrix;
 ```
-&nbsp;
 
 #### `t_matrix *ft_matcreate(int n_rows, int n_cols)`
 
