@@ -2,7 +2,10 @@
 
 ## Table of contents
 
-| ﻿[String Manipulation](#String-Manipulation-1)                                  | [Memory Manipulation](#Memory-Manipulation-1)                        | [Linked Lists](#Linked-Lists-1)                                      | [Matrices](#Matrices-1)                                             |
+<div align="center">
+
+
+|[String Manipulation](#String-Manipulation)                                    | [Memory Manipulation](#Memory-Manipulation)                          | [Linked Lists](#Linked-Lists)                                        | [Matrices](#Matrices)                                               |
 |--------------------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------|---------------------------------------------------------------------|
 | [ft_atoi](#int-ft_atoiconst-char-str)                                          | [ft_calloc](#void-ft_callocsize_t-count-size_t-size)                 | [ft_lstadd_back](#void-ft_lstadd_backt_list-alst-t_list-new)         | [ft_matcreate](#t_matrix-ft_matcreateint-n_rows-int-n_cols)         |
 | [ft_bzero](#void-ft_bzerovoid-str-size_t-n)                                    | [ft_memalloc](#void-t_memallocsize_t-size)                           | [ft_lstadd_front](#void-ft_lstadd_frontt_list-alst-t_list-new)       | [ft_matdestroy](#void-ft_matdestroyt_matrix-matrix)                 |
@@ -52,6 +55,7 @@
 | [ft_tolower](#int-ft_tolowerint-c)                                             |                                                                      |                                                                      |                                                                     |
 | [ft_toupper](#int-ft_toupperint-c)                                             |                                                                      |                                                                      |                                                                     |
 
+</div>
 
 ___
 ---
