@@ -6,13 +6,13 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 14:31:17 by jroberts          #+#    #+#             */
-/*   Updated: 2020/04/18 09:52:31 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/04/19 08:28:31 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static double	mult_vecs(double **cont1, double **cont2, int pos[2], int size)
+static double	mult_vecs(double **cont1, double **cont2, int ind[2], int size)
 {
 	int		i;
 	double	res;
@@ -21,7 +21,7 @@ static double	mult_vecs(double **cont1, double **cont2, int pos[2], int size)
 	res = 0;
 	while (i < size)
 	{
-		res += content1[ind[0]][i] * content2[i][ind[1]];
+		res += cont1[ind[0]][i] * cont2[i][ind[1]];
 		i++;
 	}
 	return (res);

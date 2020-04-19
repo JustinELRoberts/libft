@@ -246,7 +246,7 @@ ___
 
 #### `char **ft_split(const char *str, char c)`
 
-* Allocates (with `malloc()`) and returns an array of strings obtained by splitting `str` using the character `c` as a delimiter. The array must be ended by a `NULL` pointer.
+* Allocates (with `malloc()`) and returns an array of strings obtained by splitting `str` using the character `c` as a delimiter. The array is ended by a `NULL` pointer.
 
 * Parameters:
     * `str`: The string to split

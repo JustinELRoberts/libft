@@ -6,94 +6,63 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 09:47:55 by jroberts          #+#    #+#             */
-/*   Updated: 2020/04/18 09:49:13 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/04/19 13:39:33 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		initialize_delim_locs(int *delim_locs, int len)
+static void		clear_result(char **result, int num_allocated)
 {
 	int		i;
 
-	i = 0;
-	delim_locs[0] = -1;
-	while (i < len)
-	{
-		delim_locs[i] = -1;
-		i++;
-	}
+	i = -1;
+	while (++i < num_allocated)
+		free(result[i]);
 }
 
-static void		get_delim_locs(const char *s, char c, int *delim_locs)
+static int		get_result(char **result, const char *str, char c)
 {
-	int			on_delim;
-	int			i;
-	int			j;
+	int		res_ind;
+	int		len;
+	int		start;
+	int		end;
 
-	on_delim = 1;
-	i = 0;
-	j = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i])
+	res_ind = 0;
+	len = ft_strlen(str);
+	start = -1;
+	while (++start < len)
 	{
-		if (s[i] != c)
+		if (str[start] != c)
 		{
-			if (on_delim)
-			{
-				delim_locs[j] = i;
-				j++;
-			}
-			on_delim = 0;
+			end = start + 1;
+			while (str[end] && str[end] != c)
+				end++;
+			result[res_ind++] = ft_substr(str, start, end - start);
+			if (result[res_ind - 1] == NULL)
+				clear_result(result, res_ind);
+			if (result[res_ind - 1] == NULL)
+				return (-1);
+			start = end - 1;
 		}
-		else
-			on_delim = 1;
-		i++;
 	}
+	result[res_ind] = NULL;
+	return (1);
 }
 
-static int		get_num_delims(int *delim_locs)
-{
-	int		i;
-
-	i = 0;
-	while (delim_locs[i] >= 0)
-		i++;
-	return (i);
-}
-
-static void		make_delim_locs(const char *s, char c, int *delim_locs)
-{
-	initialize_delim_locs(delim_locs, ft_strlen(s));
-	get_delim_locs(s, c, delim_locs);
-}
-
-char			**ft_split(const char *s, char c)
+char			**ft_split(const char *str, char c)
 {
 	char	**result;
-	int		delim_locs[ft_strlen(s) + 1];
-	int		*ind;
 
-	make_delim_locs(s, c, delim_locs);
-	ind = (int[3]){-1, get_num_delims(delim_locs), 0};
-	result = (char **)ft_memalloc(sizeof(char*) * (ind[1] + 1));
-	while (++ind[0] < get_num_delims(delim_locs) + 1)
-		result[ind[0]] = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	result[get_num_delims(delim_locs)] = NULL;
-	ind = (int[3]){0, delim_locs[0], 0};
-	if (delim_locs[0] < 0)
-		return (result);
-	while (delim_locs[ind[0]] >= 0 && s[ind[1]])
+	if (str == NULL)
+		return (NULL);
+	result = (char**)ft_memalloc(sizeof(char*) * (ft_strlen(str) + 1));
+	if (result == NULL)
+		return (NULL);
+	if (get_result(result, str, c) == -1)
 	{
-		if (s[ind[1]] == c)
-		{
-			ind[0]++;
-			ind[1] = delim_locs[ind[0]];
-			ind[2] = 0;
-			continue;
-		}
-		result[ind[0]][ind[2]++] = s[ind[1]++];
+		free(result);
+		return (NULL);
 	}
-	return (s != NULL) ? result : NULL;
+	return (result);
 }
