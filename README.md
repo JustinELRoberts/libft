@@ -672,7 +672,7 @@ ___
 ---
 
 ## Linked Lists
-The following struct is used to represent a matrix and will be referenced throughout in this section:
+The following struct is used to represent a list and will be referenced throughout in this section:
 
 ```
 typedef struct          s_list
