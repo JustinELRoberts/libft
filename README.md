@@ -1,5 +1,7 @@
 # Libft
 
+Todo: Add get_next_line.c. However, in order to do that, I need to reintroduce the linked list struct from the old cirriculum.
+ 
 ## Table of contents
 
 
