@@ -534,7 +534,7 @@ ___
 
 #### `char *ft_substr(const char *str, unsigned int start, size_t len)`
 
-* Allocates (with `malloc()`) and returns a substring from the string `s`. The substring begins at index `start` and is of maximum size `len`.
+* Allocates (with `malloc()`) and returns a substring from the string `str`. The substring begins at index `start` and is of maximum size `len`.
 
 *  Parameters:
     * `str`: The string from which to create the substring

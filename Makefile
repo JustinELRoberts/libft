@@ -10,6 +10,7 @@ FUNCS = atoi bzero calloc isalnum isalpha isascii isdigit isprint itoa memalloc 
 WITH_PREFIX = $(addprefix ft_, $(FUNCS))
 NAME = libft.a
 PRECOMPILED = $(addsuffix .o, $(WITH_PREFIX))
+#PRECOMPILED += get_next_line/get_next_line.o
 FLAGS = -Wall -Werror -Wextra
 
 .PHONY: all clean clean re

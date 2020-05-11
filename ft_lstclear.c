@@ -6,7 +6,7 @@
 /*   By: jroberts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 09:47:28 by jroberts          #+#    #+#             */
-/*   Updated: 2020/04/18 09:47:29 by jroberts         ###   ########.fr       */
+/*   Updated: 2020/05/11 13:18:37 by jroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ void	ft_lstclear(t_list **alst, void (*del)(void *))
 		link = link->next;
 	}
 	del(previous_link);
+	alst = NULL;
 	*alst = NULL;
 }
